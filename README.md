@@ -212,7 +212,9 @@ eShell: main > go()
 EAD-CogBot started! Bot is running in AD mode...
 ```
 
-### Inspecting Low Knowledge Bases (in case LKB_USAGE = true in [LKB] section of config.ini)
+### Inspecting Low Knowledge Bases
+
+In case of LKB_USAGE = true in [LKB] section of config.ini, Low Knowledge Base can be inspected as follows:
 
 ```sh
 eShell: main > lkb()
