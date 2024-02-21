@@ -171,7 +171,7 @@ Asserting definite clause into Fol Kb.
  Is_VBZ(Joe_NNP_Biden_NNP(x1), Of_IN(President_NNP(x2), United_NNP_States_NNP(x3)))
 
 ```
-### Inspecting High Knowledge Base (AD)
+### Inspecting High Knowledge Base
 ```sh
 eShell: main > hkb()
 Is_VBZ(Joe_NNP_Biden_NNP(x1), Of_IN(President_NNP(x2), United_NNP_States_NNP(x3)))
@@ -180,7 +180,7 @@ Is_VBZ(Joe_NNP_Biden_NNP(x1), Of_IN(President_NNP(x2), United_NNP_States_NNP(x3)
 
 ```
 
-### Query High Knowledge Base (AD) - hot topic
+### Query High Knowledge Base (AD) - *hot topic*
 ```sh
 eShell: main > proc("Who is Joe Biden?")
 
@@ -189,11 +189,9 @@ Result: {v_27: x10, x11: Of_IN(President_NNP(v_28), United_NNP_States_NNP(v_29))
 Generating llm text from FOL....
 
 The President of the United States
-
-eShell: main > proc("Who is Joe Biden?")
 ```
 
-### Query High Knowledge Base (AD) - non-hot topic
+### Query High Knowledge Base (AD) - *non-hot topic*
 ```sh
 eShell: main > proc("Who is Barack Obama?")
 
@@ -236,7 +234,7 @@ eShell: main >
 
 to start a session you have to go to the telegram bot window and type the word "hello". 
 
-![Image 2](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/waking.jpg)
+![Image 2](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/waking.jpg){ width=50% }
 
 Assertions must end with "." and questions must end with "?". 
 
@@ -337,4 +335,4 @@ Beyond that, the following are known issues related to the code in this reposito
 For this purpose, the integration of tools such as [neuralcoref](https://github.com/huggingface/neuralcoref) is planned. Coders might include such a tool in their own fork of this repository.
 * Sentence containing singles quoation marks (') are still not well managed. So, it is recommended to not use it, and, in such a case, to rephrase utterances differently.
 * Occasional crashes during parsing of text may occur, especially during conversion from natural language into logical forms/definite clauses. In this case, rephrasing/reducing utterances is recommended.
-* Sometime disambiguation might not work well, due to possible lack of useful examples within related wordnet synsets that must be evaluated. It is planned to integrate additional lexical resources in order to address such an issue.
+* IMPORTANT: all production rules are designed starting from a toy domain. Practical use involves a global review of all parsing rules and modules.
