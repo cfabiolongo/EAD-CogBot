@@ -25099,3 +25099,81 @@ Execution time: 1708352333.4851377
 
 Query: who is Colonel West?
 Execution time: 1708352358.6875339
+
+Feed: Joe Biden is the President of Unied States.
+Execution time: 1708508815.7856576
+
+Feed: Joe Biden is the President of United States.
+Execution time: 1708508884.6602
+
+Query: Who is Biden?
+Execution time: 1708509097.2238162
+
+Query: Who is Joe Biden?
+Execution time: 1708509138.6938674
+
+Query: who is the President of United States?
+Execution time: 1708509290.084353
+
+Query: Who is the President of United States?
+Execution time: 1708509408.7702835
+
+Query: who is Barack Obama?
+Execution time: 1708509549.4028883
+
+------ NEW SESSION ------ 21/02/2024 11:00:15
+
+AD: Barack Obama become the President of United States.
+
+Feed: Barack Obama become the President of United States.
+Execution time: 0.4313781261444092
+
+AD: Who become the President of United States?
+
+Query: Who become the President of United States?
+Execution time: 1.2224922180175781
+
+Query: who become the President of United States?
+Execution time: 116.92224073410034
+
+------ NEW SESSION ------ 21/02/2024 11:11:06
+
+AD: Barack Obama became President of United States.
+
+Feed: Barack Obama became President of United States.
+Execution time: 0.3119182586669922
+
+AD: Who became President of United States?
+
+Query: Who became President of United States?
+Execution time: 1.4541211128234863
+
+AD: What became Barack Obama?
+
+Query: What became Barack Obama?
+Execution time: 0.9565584659576416
+
+AD: Where Barack Obama was born?
+
+Query: Where Barack Obama was born?
+Execution time: 1.3264808654785156
+
+AD: Aaaaaa
+
+LLM: Aaaaaa
+Execution time: 0.23501229286193848
+
+AD: A
+
+LLM: A
+Execution time: 0.23978662490844727
+
+AD: Fff
+
+LLM: Fff
+Execution time: 0.2284402847290039
+
+AD: Ffff
+
+LLM: Ffff
+Execution time: 0.2807145118713379

@@ -144,7 +144,7 @@ Before going any further it is first necessary to create a new telegram bot by f
 ---------------
 
 ```sh
-> python ad-caspar.py
+> python ead-cogbot.py
 
           PHIDIAS Release 1.3.4.alpha (deepcopy-->clone,micropython,py3)
           Autonomous and Robotic Systems Laboratory
@@ -161,32 +161,60 @@ In section [LLM] of congig.ini, the parameter *MODE* must be set as follows:
 * LLM (only Query/Answer LLM)
 * DUAL (AD+LLM) -----> to be added soon!
 
-### Starting chatbot agent
+### Testing agent from shell (AD)
+
+```sh
+eShell: main > proc("Joe Biden is the President of United States.")
+
+Asserting definite clause into Fol Kb.
+
+ Is_VBZ(Joe_NNP_Biden_NNP(x1), Of_IN(President_NNP(x2), United_NNP_States_NNP(x3)))
+
+```
+### Inspecting High Knowledge Base (AD)
+```sh
+eShell: main > hkb()
+Is_VBZ(Joe_NNP_Biden_NNP(x1), Of_IN(President_NNP(x2), United_NNP_States_NNP(x3)))
+
+1 clauses in Higher Knowledge Base
+
+```
+
+### Query High Knowledge Base (AD) - hot topic
+```sh
+eShell: main > proc("Who is Joe Biden?")
+
+Result: {v_27: x10, x11: Of_IN(President_NNP(v_28), United_NNP_States_NNP(v_29))}
+
+Generating llm text from FOL....
+
+The President of the United States
+
+eShell: main > proc("Who is Joe Biden?")
+```
+
+### Query High Knowledge Base (AD) - non-hot topic
+```sh
+eShell: main > proc("Who is Barack Obama?")
+
+Generating llm text....
+
+Well...I am not sure, but....Barack Obama is a former President of the United States.
+
+```
+
+### Starting chatbot
 
 ---------------
 
 ```sh
 eShell: main > go()
-eShell: main > AD-Caspar started! Bot is running...
+EAD-CogBot started! Bot is running in AD mode...
 ```
 
-### Inspecting Knowledge Bases
-
----------------
-
-After the agent is started, the Belief KB can be inspected with the following command:
+### Inspecting Low Knowledge Bases (in case LKB_USAGE = true in [LKB] section of config.ini)
 
 ```sh
-eShell: main > kb
-WAIT(1000)
-eShell: main >
-```
-The value inside the belief WAIT represents the maximum duration of each session in seconds. It can be changed by modifying the value
-of the variable WAIT_TIME (AGENT Section) in config.ini. The two layers of the Clauses KB (respectively High KB and Low KB) can be inspected with the following commands:
-
-```sh
-eShell: main > hkb()
-0 clauses in High Knowledge Base
 eShell: main > lkb()
 0  clauses in Low Knowledge Base
 eShell: main >
@@ -204,27 +232,39 @@ Low Clauses kb initialized.
 eShell: main >
 ```
 
-to start a session you have to go to the telegram bot window and type the word "hello". Assertions must end with 
-"." and questions must end with "?". Otherwise the utterances will be processed as direct commands or routines (check out the page of [CASPAR](https://github.com/fabiuslongo/pycaspar) for details).
+to start a session you have to go to the telegram bot window and type the word "hello". 
 
-![Image 2](https://github.com/fabiuslongo/ad-caspar/blob/master/images/start-assertion.JPG)
+![Image 2](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/waking.JPG)
+
+Assertions must end with "." and questions must end with "?". 
+
+![Image 3](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_assert.JPG)
 
 After such interaction with the telegram bot, the two layers of the Clauses KB will be as it follows:
 
 ```sh
 eShell: main > hkb()
-eShell: main > In_IN(Become_VBD(Barack_NNP_Obama_NNP(x1), Of_IN(President_NN(x2), United_NNP_States_NNP(x3))), N2009_CD(x4))
+eShell: main > Became_VBD(Barack_NNP_Obama_NNP(x1), Of_IN(President_NNP(x2), United_NNP_States_NNP(x3)))
 
 1 clauses in High Knowledge Base
 
 eShell: main > lkb()
 
-In_IN(Become_VBD(Barack_NNP_Obama_NNP(x1), Of_IN(President_NN(x2), United_NNP_States_NNP(x3))), N2009_CD(x4))
-['In_IN', 'Become_VBD', 'Barack_NNP_Obama_NNP', 'Of_IN', 'President_NN', 'United_NNP_States_NNP', 'N2009_CD']
-Barack Obama became the president of United States in 2009.
+Became_VBD(Barack_NNP_Obama_NNP(x1), Of_IN(President_NNP(x2), United_NNP_States_NNP(x3)))
+['Became_VBD', 'Barack_NNP_Obama_NNP', 'Of_IN', 'President_NN', 'United_NNP_States_NNP']
+Barack Obama became the president of United States.
 
 1  clauses in Low Knowledge Base
 ```
+
+Querying chatbot on hot topic...
+
+![Image 4](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_questions.JPG)
+
+Querying chatbot on non-hot topic...
+
+![Image 5](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/non-hot-topic_question.JPG)
+
 
 ### Automatic knowledge learning
 
