@@ -298,33 +298,15 @@ set in FILE_EXPORT_LKB_NAME (AGENT section), with the command *expt()* given in 
 ### Querying the bot
 
 A detailed overview of how the wh-questions are treated is provided [here](https://github.com/fabiuslongo/ad-caspar/blob/master/wquestions.md).
-In the following picture are shown two different kind of query with wh-questions: 
-
-![Image 3](https://github.com/fabiuslongo/ad-caspar/blob/master/images/query1.JPG)
-
-This prototype give back as result a substitutions containing the literal as
-logical representation of the snipplet-result of the query. After a bot reboot, as we can see in the following picture, the result will be slightly different because the High Clauses KB
+In case of LKB usage, after a bot reboot the result will be slightly different because the High Clauses KB
 will be empty and must be populated getting clauses from the Low Clauses KB, taking in account of a confidence level about the presence of the lemmatized labels in the clauses.
 Such a confidence level, depending of the domain can be changed by modifying the value of MIN_CONFIDENCE (LKB Section) in config.ini. The first query will get a result form the Low KB (From LKB: True), while the second one from the High KB (From HKB: True);
 thats because the content of the High KB is preserved during the session, otherwise it can be emptied after a query by changing the value of
 EMPTY_HKB_AFTER_REASONING (LKB Section) in config.ini.
 
-![Image 4](https://github.com/fabiuslongo/ad-caspar/blob/master/images/query2.JPG)
-
-By changing the values of SHOW_REL (QA Section) in config.ini, it can be possible to show the clauses involved in the abduction pre-inference, together with their confidences.
-
-![Image 5](https://github.com/fabiuslongo/ad-caspar/blob/master/images/query3.JPG)
-
-### Failing queries
-
-In the bot closed world assumption, the agent can give back only answers related to its onw knowledge, otherwise it will return _False_.
-Optionally, with the value of SHOW_REL set to _true_, the closest results can be shown together with their confidence level: 
-
-![Image 5](https://github.com/fabiuslongo/ad-caspar/blob/master/images/query4.JPG)
-
 ### Nested Reasoning
 
-In order to test the _Nested Reasoning_ inherited from [CASPAR](https://github.com/fabiuslongo/pycaspar) by using the Telegram bot, you must be sure some parameters in config.ini are as it follows:
+In order to test the _Nested Reasoning_ you must be sure some parameters in config.ini are as it follows:
 
 ---------------
 
@@ -342,46 +324,6 @@ Section [GEN]
 
 ASSIGN_RULES_ADMITTED ar used for creating logic implication starting from a copular verbs (*be*, present tense), while
 CONDITIONAL_WORDS (*when*, *if*, *while*, etc.) are those for what we want a logic implication will be asserted.
-
-#### populating the knowledge base...
-
-![Image 6](https://github.com/fabiuslongo/ad-caspar/blob/master/images/nested1.JPG)
-
-![Image 7](https://github.com/fabiuslongo/ad-caspar/blob/master/images/nested2.JPG)
-
-#### querying the knowledge base...
-
-![Image 8](https://github.com/fabiuslongo/ad-caspar/blob/master/images/nested3.JPG)
-
-#### querying the knowledge base after a reboot...
-
-![Image 9](https://github.com/fabiuslongo/ad-caspar/blob/master/images/nested4.JPG)
-
-After a failed attempt using the High KB (From HKB: False), a successful reasoning is achieved (From LKB: True) getting query-relevant clauses from the Low KB with a MIN_CONFIDENCE (Section [LKB] of config.ini) greater than 0.6.
-
-### Assertion/Inference via shell (outside chatbot)
-
-The response after assertion/reasoning commands can be simulated outside the chatbot, with the shell command *proc* as follow:
-
-* Assertions (with final sentence dot)
-
-```sh
-> proc("Colonel West is American.")
-```
-
-* Questions (with final sentence question mark)
-
-```sh
-> proc("Colonel West is American?")
-```
-
-* IoT commands (with nothing at the end of sentence)
-
-```sh
-> proc("turn off the lights in the living room")
-```
-
-
 
 ### Known issues
 
