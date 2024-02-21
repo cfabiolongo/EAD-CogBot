@@ -1,6 +1,6 @@
 # Question-Answering capabilities overview
 
-In this file is shown how AD-CASPAR deals with Polar and Wh-questions, by the means of the module qa_shifter.py. The latter
+In this file is shown how EAD-CogBot deals with Polar and Wh-questions, by the means of the module qa_shifter.py. The latter
 works as a parser based on production rules, which works considering linguistic rules in order to shift a question into a likely assertion.
 
 
