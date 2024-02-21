@@ -241,7 +241,7 @@ Assertions must end with "." and questions must end with "?".
 
 ![Image 3](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_assert.jpg)
 
-<img src="https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_assert.jpg.jpg" width="500">
+<img src="https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_assert.jpg" width="500">
 
 
 After such interaction with the telegram bot, the two layers of the Clauses KB will be as it follows:
