@@ -236,6 +236,9 @@ to start a session you have to go to the telegram bot window and type the word "
 
 ![Image 2](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/waking.jpg)
 
+<img src="https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/waking.jpg" width="100" height="100">
+
+
 Assertions must end with "." and questions must end with "?". 
 
 ![Image 3](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_assert.jpg)

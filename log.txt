@@ -25177,3 +25177,18 @@ AD: Ffff
 
 LLM: Ffff
 Execution time: 0.2807145118713379
+
+Feed: Barack Obama became President of United States in 2009.
+Execution time: 1708523858.3521912
+
+Query: What in 2009?
+Execution time: 1708523879.385556
+
+Query: When Barack Obama became President of United States?
+Execution time: 1708523920.2036264
+
+Query: When Barack Obama became the President of United States?
+Execution time: 1708524048.5505483
+
+Query: Who became the President of United States in 2009?
+Execution time: 1708524081.6916988
