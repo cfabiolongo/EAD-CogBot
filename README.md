@@ -234,11 +234,11 @@ eShell: main >
 
 to start a session you have to go to the telegram bot window and type the word "hello". 
 
-![Image 2](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/waking.JPG)
+![Image 2](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/waking.jpg)
 
 Assertions must end with "." and questions must end with "?". 
 
-![Image 3](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_assert.JPG)
+![Image 3] (https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_assert.jpg)
 
 After such interaction with the telegram bot, the two layers of the Clauses KB will be as it follows:
 
@@ -259,11 +259,11 @@ Barack Obama became the president of United States.
 
 Querying chatbot on hot topic...
 
-![Image 4](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_questions.JPG)
+![Image 4](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_questions.jpg)
 
 Querying chatbot on non-hot topic...
 
-![Image 5](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/non-hot-topic_question.JPG)
+![Image 5](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/non-hot-topic_question.jpg)
 
 
 ### Automatic knowledge learning
