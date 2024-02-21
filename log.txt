@@ -25192,3 +25192,7 @@ Execution time: 1708524048.5505483
 
 Query: Who became the President of United States in 2009?
 Execution time: 1708524081.6916988
+
+LLM-shell: tell me a joke
+
+LLM-shell: Tell me a nice joke

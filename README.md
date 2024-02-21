@@ -163,6 +163,9 @@ In section [LLM] of config.ini, the parameter *MODE* must be set as follows:
 
 ### Testing agent from shell (AD)
 
+Sentence can be procesesd also outside chatbot environment, by using *proc(X)* (X=sentence). In any case, assertions must end with "." and questions must end with "?". 
+Every other text will be processed by the LLM.
+
 ```sh
 eShell: main > proc("Joe Biden is the President of United States.")
 
@@ -192,13 +195,24 @@ The President of the United States
 ```
 
 ### Query High Knowledge Base (AD) - *non-hot topic*
+
+When a question falls out defined *hot* topic, EAD-CogBot will begin the response with *Well...I am not sure, but....*, and after it will attach generated text from LLM.
+
 ```sh
 eShell: main > proc("Who is Barack Obama?")
 
 Generating llm text....
 
 Well...I am not sure, but....Barack Obama is a former President of the United States.
+```
 
+### Query High Knowledge Base (AD) - *generic text*
+```sh
+eShell: main > proc("tell me a joke")
+
+Generating llm text....
+
+Why was the math book sad? Because it had too many problems.
 ```
 
 ### Starting chatbot
@@ -232,7 +246,7 @@ Low Clauses kb initialized.
 eShell: main >
 ```
 
-to start a session you have to go to the telegram bot window and type the word "hello". 
+To start a session you have to go to the telegram bot window and type the word "hello". 
 
 <img src="https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/waking.jpg" width="500">
 
@@ -261,7 +275,6 @@ Barack Obama became the president of United States.
 Querying chatbot on hot topic...
 
 <img src="https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_questions.jpg" width="500">
-
 
 
 Querying chatbot on non-hot topic wll let LLama-2-chat to get an answer from its implicit knowledge...
@@ -308,7 +321,7 @@ EMPTY_HKB_AFTER_REASONING (LKB Section) in config.ini.
 
 ### Nested Reasoning
 
-In order to test the _Nested Reasoning_ you must be sure some parameters in config.ini are as it follows:
+In order to test the _Nested Reasoning_, where knowledge is combined to obtain human-like reasoning, you must be sure some parameters in config.ini are as it follows:
 
 ---------------
 
