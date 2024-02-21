@@ -239,10 +239,7 @@ to start a session you have to go to the telegram bot window and type the word "
 
 Assertions must end with "." and questions must end with "?". 
 
-![Image 3](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_assert.jpg)
-
 <img src="https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_assert.jpg" width="500">
-
 
 After such interaction with the telegram bot, the two layers of the Clauses KB will be as it follows:
 
@@ -263,11 +260,14 @@ Barack Obama became the president of United States.
 
 Querying chatbot on hot topic...
 
-![Image 4](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_questions.jpg)
+<img src="https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_questions.jpg" width="500">
+
+
 
 Querying chatbot on non-hot topic wll let LLama-2-chat to get an answer from its implicit knowledge...
 
-![Image 5](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/non-hot-topic_question.jpg)
+
+<img src="https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/non-hot-topic_question.jpg" width="500">
 
 
 ### Automatic knowledge learning
