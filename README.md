@@ -325,16 +325,42 @@ In order to test the _Nested Reasoning_, where knowledge is combined to obtain h
 
 ---------------
 
+(achieving all useful clause via *generalization-based* knowledge base expansion)
+
 Section [NL_TO_FOL]:
 * ASSIGN_RULES_ADMITTED = true
 * CONDITIONAL_WORDS = WHEN
+* DEAJECT_NOM = false
 
 Section [REASONING]
 * NESTED_REASONING = true
 
+Section [POS]
+* OBJ_JJ_TO_NOUN = true
+
 Section [GEN]
 * GEN_PREP = true
 * GEN_ADJ = true
+* GEN_ADV = true
+
+---------------
+
+(achieving all useful clause via *deajectival-nominalization-based* knowledge base expansion)
+
+Section [NL_TO_FOL]:
+* ASSIGN_RULES_ADMITTED = true
+* CONDITIONAL_WORDS = WHEN
+* DEAJECT_NOM = true
+
+Section [REASONING]
+* NESTED_REASONING = true
+
+Section [POS]
+* OBJ_JJ_TO_NOUN = true
+
+Section [GEN]
+* GEN_PREP = true
+* GEN_ADJ = false
 * GEN_ADV = true
 
 ASSIGN_RULES_ADMITTED ar used for creating logic implication starting from a copular verbs (*be*, present tense), while
