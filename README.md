@@ -156,8 +156,10 @@ eShell: main >
 
 ### Setting interaction configuration
 
-
-
+In section [LLM] of congig.ini, the parameter *MODE* must be set as follows: 
+* AD (Abduction-Deduction with FOL-to_NL response)
+* LLM (only Query/Answer LLM)
+* DUAL (AD+LLM) -----> to be added soon!
 
 ### Starting chatbot agent
 
