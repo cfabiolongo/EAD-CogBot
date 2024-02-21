@@ -234,7 +234,7 @@ eShell: main >
 
 to start a session you have to go to the telegram bot window and type the word "hello". 
 
-![Image 2](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/waking.jpg | width=100)
+![Image 2](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/waking.jpg)
 
 Assertions must end with "." and questions must end with "?". 
 
