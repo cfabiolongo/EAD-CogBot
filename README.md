@@ -238,7 +238,7 @@ to start a session you have to go to the telegram bot window and type the word "
 
 Assertions must end with "." and questions must end with "?". 
 
-![Image 3] (https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_assert.jpg)
+![Image 3](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/hot-topic_assert.jpg)
 
 After such interaction with the telegram bot, the two layers of the Clauses KB will be as it follows:
 
