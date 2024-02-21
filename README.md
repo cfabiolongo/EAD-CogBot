@@ -297,7 +297,7 @@ set in FILE_EXPORT_LKB_NAME (AGENT section), with the command *expt()* given in 
 
 ### Querying the bot
 
-A detailed overview of how the wh-questions are treated is provided [here](https://github.com/fabiuslongo/ad-caspar/blob/master/wquestions.md).
+A detailed overview of how the wh-questions are treated is provided [here](https://github.com/cfabiolongo/EAD-CogBot/blob/master/wquestions.md).
 In case of LKB usage, after a bot reboot the result will be slightly different because the High Clauses KB
 will be empty and must be populated getting clauses from the Low Clauses KB, taking in account of a confidence level about the presence of the lemmatized labels in the clauses.
 Such a confidence level, depending of the domain can be changed by modifying the value of MIN_CONFIDENCE (LKB Section) in config.ini. The first query will get a result form the Low KB (From LKB: True), while the second one from the High KB (From HKB: True);
