@@ -374,7 +374,7 @@ CONDITIONAL_WORDS (*when*, *if*, *while*, etc.) are those for what we want a log
 # Known issues
 
 It is well-known that natural language can be ambiguous, subject to interpretation about the semantic role of each lexical parts.
-For such a reason out-of-common sense utterance might lead to unexpected logical forms, due to the dataset the dependency parser has been trained on. Still, as reported [here](https://spacy.io/usage/facts-figures), the model used for dependency parsing has an accuracy of 0.90 (optionally *en_core_web_trf* might be used, which has 0.95, but similarity is not supported so disambiguation won't work), which means that some missful/wrong dependecy classification is expected.
+For such a reason out-of-common sense utterance might lead to unexpected logical forms, due to the dataset the dependency parser has been trained on. Still, as reported [here](https://spacy.io/usage/facts-figures), the model used for dependency parsing has an accuracy of 0.95, which means that some missful/wrong dependecy classification is expected, especially for longer sentences.
 Beyond that, the following are known issues related to the code in this repository:
 
 ---------------
