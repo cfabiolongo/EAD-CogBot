@@ -163,7 +163,7 @@ In section [LLM] of config.ini, the parameter *MODE* must be set as follows:
 
 ### Testing agent from shell (AD)
 
-Sentence can be procesesd also outside chatbot environment, by using *proc(X)* (X=sentence). In any case, assertions must end with "." and questions must end with "?". 
+Sentence can be processed also outside chatbot environment, by using *proc(X)* (X=sentence). In any case, assertions must end with "." and questions must end with "?". 
 Every other text will be processed by the LLM.
 
 ```sh
@@ -196,7 +196,7 @@ The President of the United States
 
 ### Query High Knowledge Base (AD) - *non-hot topic*
 
-When a question falls out defined *hot* topic, EAD-CogBot will begin the response with *Well...I am not sure, but....*, and after it will attach generated text from LLM.
+When a question falls out defined *hot* topic, EAD-CogBot will begin the response with the custom prefix *Well...I am not sure, but....* (which can be set with by parameter PREFIX_LLM_RESP in [LLM] Section of config.ini), and after it will attach generated text from LLM.
 
 ```sh
 eShell: main > proc("Who is Barack Obama?")

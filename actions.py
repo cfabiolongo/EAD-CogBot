@@ -56,6 +56,8 @@ COP_VERB = str(config.get('QA', 'COP_VERB')).split(", ")
 ROOT_TENSE_DEBT = str(config.get('QA', 'ROOT_TENSE_DEBT')).split(", ")
 SHOW_REL = config.getboolean('QA', 'SHOW_REL')
 
+PREFIX_LLM_RESP = str(config.get('LLM', 'PREFIX_LLM_RESP'))
+
 
 # creating debt tenses dictionary
 tense_debt_voc = {}
@@ -273,7 +275,7 @@ class llm_get_last(Action):
     def execute(self, *args):
         a = str(args).split("'")[5]
         result = parser.get_LLM(a)
-        result_last = "Well...I'm not sure, but...."+result
+        result_last = PREFIX_LLM_RESP+result
         self.assert_belief(OUT(result_last))
 
 
