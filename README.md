@@ -371,7 +371,7 @@ Section [GEN]
 ASSIGN_RULES_ADMITTED ar used for creating logic implication starting from a copular verbs (*be*, present tense), while
 CONDITIONAL_WORDS (*when*, *if*, *while*, etc.) are those for what we want a logic implication will be asserted.
 
-### Known issues
+# Known issues
 
 It is well-known that natural language can be ambiguous, subject to interpretation about the semantic role of each lexical parts.
 For such a reason out-of-common sense utterance might lead to unexpected logical forms, due to the dataset the dependency parser has been trained on. Still, as reported [here](https://spacy.io/usage/facts-figures), the model used for dependency parsing has an accuracy of 0.90 (optionally *en_core_web_trf* might be used, which has 0.95, but similarity is not supported so disambiguation won't work), which means that some missful/wrong dependecy classification is expected.
