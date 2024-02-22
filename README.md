@@ -215,15 +215,6 @@ Generating llm text....
 Why was the math book sad? Because it had too many problems.
 ```
 
-### Starting chatbot
-
----------------
-
-```sh
-eShell: main > go()
-EAD-CogBot started! Bot is running in AD mode...
-```
-
 ### Inspecting Low Knowledge Base
 
 In case of LKB_USAGE = true in [LKB] section of config.ini, Low Knowledge Base can be inspected as follows:
@@ -245,6 +236,20 @@ Low Clauses kb initialized.
 0  clauses deleted.
 eShell: main >
 ```
+
+
+### Starting chatbot
+
+---------------
+
+The Telegram chatbot must be started by shell command *go()* as follows:
+
+```sh
+eShell: main > go()
+EAD-CogBot started! Bot is running in AD mode...
+```
+
+
 
 To start a session you have to go to the telegram bot window and type the word "hello". 
 
