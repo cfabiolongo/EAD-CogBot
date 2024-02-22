@@ -82,7 +82,7 @@ from python console:
   user: "root",
   pwd: "example",
   roles: [
-    { role: "readWrite", db: "ad-caspar" }
+    { role: "readWrite", db: "ead-cogbot" }
   ]
 })
 ```
