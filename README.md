@@ -376,6 +376,6 @@ Beyond that, the following are known issues related to the code in this reposito
 
 * Anaphora resolution/coreferentiators are not included yet in this code. So it is recommended to not use sentence containing pronoms, otherwise any abductive/deductive operations won't be successful.
 For this purpose, the integration of tools such as [neuralcoref](https://github.com/huggingface/neuralcoref) is planned. Coders might include such a tool in their own fork of this repository.
-* Sentence containing singles quoation marks (') are still not well managed. So, it is recommended to not use it, and, in such a case, to rephrase utterances differently.
+* Sentence containing singles quotation marks (') are still not well managed. So, it is recommended to not use it, and, in such a case, to rephrase utterances differently.
 * Occasional crashes during parsing of text may occur, especially during conversion from natural language into logical forms/definite clauses. In this case, rephrasing/reducing utterances is recommended.
 * IMPORTANT: all production rules are designed starting from a toy domain. Practical use involves a global review of all parsing rules and modules.
