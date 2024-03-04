@@ -2,7 +2,7 @@
 
 This is the repository of the Python (3.10+) implementation of EAD-CogBot (Expressive Abductive-Deductive Cognitive ChatBot)
 a framework able to instantiate chatbots for Abductive-Deductive reasoning on a first-order logic knowledge base, but endowed
-of the expressive power of LLMs. EAD-CogBot is built on top on the cognitive architecture AD-CASPAR based on Natural Language Processing, whose paper is published in [Cognitive Systems Research](https://www.sciencedirect.com/science/article/abs/pii/S1389041723000359).
+of the expressive power of LLMs. EAD-CogBot is built on top on the cognitive architecture [AD-CASPAR](https://github.com/cfabiolongo/ad-caspar) based on Natural Language Processing, whose paper is published in [Cognitive Systems Research](https://www.sciencedirect.com/science/article/abs/pii/S1389041723000359).
 
 ![Image 1](https://github.com/cfabiolongo/EAD-CogBot/blob/master/images/cogbot-arch.jpg)
 
